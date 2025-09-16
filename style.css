@@ -5,28 +5,38 @@ body,
   padding: 0;
   margin: 0;
   box-sizing: border-box;
-  background-color: #607D8B;
+  background-color: white;
   font-family: "Montserrat", sans-serif;
 }
 
 
-Body {
+body {
 background: red;
 }
 
 
-.card{
-width: 30%;
-height: 500px;
-Background-color: green;
+.card {
+  width: 22%;
+  height: 40rem;
+  margin: 3rem 0;
+  border: 2px solid black;
+  border-radius: 10px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
 }
 
 
 .container {
-Width: 90vw;
-background-color: brown;
-Margin: 30px auto;
-display: flex;
-justify-content: space-between;
-Flex-wrap: wrap;
+  width: 90vw;
+  margin: 2rem auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.card-img {
+  width: 100px;
 }
