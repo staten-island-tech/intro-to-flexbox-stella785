@@ -10,33 +10,32 @@ body,
 }
 
 
-body {
-background: red;
+.container {
+  display: flex;
+  justify-content: space-evenly;
 }
-
 
 .card {
-  width: 22%;
-  height: 40rem;
-  margin: 3rem 0;
-  border: 2px solid black;
-  border-radius: 10px;
-
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: space-around;
-}
-
-
-.container {
-  width: 90vw;
-  margin: 2rem auto;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
+  border: 3px solid black;
+  margin: 0;
+  padding: 10px;
+  text-align: center;
 }
 
 .card-img {
   width: 100px;
+}
+
+h1 {
+  font-size: 4rem;
+  text-align: center;
+  margin: 15px;
+}
+
+h2 {
+  font-size: 3rem;
+}
+
+h3 {
+  font-size: 2rem;
 }
