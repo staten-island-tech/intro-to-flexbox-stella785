@@ -27,7 +27,7 @@ body {
   margin: 10px;
   padding: 10px;
   text-align: center;
-  box-shadow: 5px 5px 10px 2px;
+  box-shadow: 5px 5px 10px 2px #757575;
   transition: 0.3s;
 }
 
@@ -47,17 +47,15 @@ button {
   background: #FFFFFF;
   line-height: 1.15;
   font-size: 16px;
-  :hover {
-    transition: all .1s ease;
-    box-shadow: 0 0 0 0 #fff, 0 0 0 3px #1de9b6;
-  }
 }
+
 
 h1 {
   background-color: #607D8B;
   font-size: 5rem;
   text-align: center;
   margin: 15px;
+  padding: 10px;
 }
 
 h2 {
