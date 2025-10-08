@@ -66,77 +66,77 @@ const sneakers = [
     name: "Nike JAM",
     price: 120,
     brand:"Nike",
-    img: "images/jam.avif"
+    img: "images/jam.avif",
     inStock: true,
   },
   {
-    name: 
-    price:
-    brand:
-    img:
+    name: "Luka 4 'Gone Camping'",
+    price: 110,
+    brand:"Nike",
+    img: "images/luka4.avif",
     inStock: true,
   },
   {
-    name:
-    price:
-    brand:
-    img:
+    name: "Nike Zoom Vomero 5",
+    price: 170,
+    brand: "Nike",
+    img: "images/vomero.avif",
     inStock: true,
   },
   {
-    name:
-    price:
-    brand:
-    img:
+    name: "Nike Aqua Swoosh",
+    price: 55,
+    brand: "Nike",
+    img: "images/aquaswoosh.avif",
     inStock: true,
   },
   {
-    name:
-    price:
-    brand:
-    img:
+    name: "Nike Dunk Low Women's Artist Collection",
+    price: 170,
+    brand: "Nike",
+    img: "images/womenartcollection.avif",
     inStock: true,
   },
   {
-    name:
-    price:
-    brand:
-    img:
+    name: "Nike Cosmic Runner",
+    price: 57,
+    brand: "Nike",
+    img: "images/cosmic.avif",
     inStock: true,
   },
   {
-    name:
-    price:
-    brand:
-    img:
+    name: "Nike Team Hustle D 12",
+    price: 65,
+    brand: "Nike",
+    img: "images/hustled12.avif",
     inStock: true,
   },
   {
-    name:
-    price:
-    brand:
-    img:
+    name: "Giannis Immortality 4",
+    price: 77,
+    brand: "Nike",
+    img: "images/giannis4.avif",
     inStock: true,
   },
   {
-    name:
-    price:
-    brand:
-    img:
+    name: "CONTEND 9 GRADE SCHOOL",
+    price: 60,
+    brand: "ASICS",
+    img: "images/contend9.webp",
     inStock: true,
   },
   {
-    name:
-    price:
-    brand:
-    img:
+    name: "SKYHAND OG",
+    price: 100,
+    brand: "ASICS",
+    img: "images/skyhand.webp",
     inStock: true,
   },
   {
-    name:
-    price:
-    brand:
-    img:
+    name: "JAPAN S GRADE SCHOOL",
+    price: 60,
+    brand: "ASICS",
+    img: "images/jsgs.webp",
     inStock: true,
   }
 ]
@@ -145,9 +145,25 @@ const sneakers = [
 //find the container using query selector
 //create function to add 1 card to screen
 
+const DOMSelectors = {
+  name: document.getElementById("name"),
+  price: document.getElementById("price"),
+/*   brand: document.getElementById("brand"), */
+  img: document.getElementById("img"),
+};
+
 function inject(sneakers) {
   //put card on screen
   //insertadjacenthtml
   //card html string
   //find in the dom md
+  DOMSelectors.display.insertAdjacentHTML(
+    "afterbegin",
+    `<div class="display-card">
+      <img class="display-img" src="${sneakers.img}"/>
+      <h2 class="display-name">${sneakers.name}</h2>
+      <h3 class="display-price">${sneakers.price}</h3>
+      <button class="remove btn">Remove Item</button>
+    </div>`
+  );
 }
