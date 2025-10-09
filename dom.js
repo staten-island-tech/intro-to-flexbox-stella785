@@ -1,4 +1,4 @@
-const sneakers = [
+const shoes = [
   {
     name: "Nike Dunk Lows",
     price: 120,
@@ -8,7 +8,7 @@ const sneakers = [
   },
   {
     name: "Sabrina 3 'Silencer'",
-    price: $100,
+    price: 100,
     brand: "Nike",
     img: "images/sabrina silencer.avif",
     inStock: true,
@@ -148,22 +148,30 @@ const sneakers = [
 const DOMSelectors = {
   name: document.getElementById("name"),
   price: document.getElementById("price"),
-/*   brand: document.getElementById("brand"), */
+  brand: document.getElementById("brand"),
   img: document.getElementById("img"),
 };
 
-function inject(sneakers) {
+function inject(shoes) {
+  //query the html where we inject the card
+  const container = document.querySelector(".container");
+  container.insertAdjacentHTML("afterbegin", `<h2>${shoes.name}</h2>`);
+}
+
+function inject(shoes) {
+  DOMSelectors.display.insertAdjacentHTML(
+    "afterbegin",
+    `<div class="card">
+      <img class="card-img" src="${album.url}"/>
+      <h2 class="card-header">${album.artist}</h2>
+      <h3 class="card-price">${album.title}</h3>
+      <button class="remove btn">Remove Album</button>
+    </div>`
+  );
+}
+
+// products.forEach((product) => inject(product));
   //put card on screen
   //insertadjacenthtml
   //card html string
   //find in the dom md
-  DOMSelectors.display.insertAdjacentHTML(
-    "afterbegin",
-    `<div class="display-card">
-      <img class="display-img" src="${sneakers.img}"/>
-      <h2 class="display-name">${sneakers.name}</h2>
-      <h3 class="display-price">${sneakers.price}</h3>
-      <button class="remove btn">Remove Item</button>
-    </div>`
-  );
-}
