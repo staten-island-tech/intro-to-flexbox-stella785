@@ -162,10 +162,10 @@ function inject(shoes) {
   DOMSelectors.display.insertAdjacentHTML(
     "afterbegin",
     `<div class="card">
-      <img class="card-img" src="${album.url}"/>
-      <h2 class="card-header">${album.artist}</h2>
-      <h3 class="card-price">${album.title}</h3>
-      <button class="remove btn">Remove Album</button>
+      <img class="card-img" src="${shoes.img}"/>
+      <h2 class="card-header">${shoes.name}</h2>
+      <h3 class="card-price">${shoes.price}</h3>
+    
     </div>`
   );
 }
