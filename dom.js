@@ -154,15 +154,14 @@ const DOMSelectors = {
 };
 
 
-document.getElementById("form").addEventListener("click", function (event) {
-  e.preventDefault(); // stops page from refreshing
-  let album = {
-    title: document.getElementById("title").value,
-    artist: document.getElementById("artist").value,
-    url: document.getElementById("url").value
+document.getElementById("form").addEventListener("submit", function (event) {
+  event.preventDefault(); // stops page from refreshing
+  let newShoes = {
+    name: document.getElementById("name").value,
+    price: document.getElementById("price").value,
+    img: document.getElementById("img").value
   };
-  inject(album); // add to the page
-  clearFields(); // reset form inputs
+  inject(newShoes); // add to the page
 });
 
 //4. Injecting into the DOM
