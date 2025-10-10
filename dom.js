@@ -145,6 +145,7 @@ const shoes = [
 //find the container using query selector
 //create function to add 1 card to screen
 
+//2. selecting elements in js
 const DOMSelectors = {
   name: document.getElementById("name"),
   price: document.getElementById("price"),
@@ -152,12 +153,19 @@ const DOMSelectors = {
   img: document.getElementById("img"),
 };
 
-function inject(shoes) {
-  //query the html where we inject the card
-  const container = document.querySelector(".container");
-  container.insertAdjacentHTML("afterbegin", `<h2>${shoes.name}</h2>`);
-}
 
+document.getElementById("form").addEventListener("click", function (event) {
+  e.preventDefault(); // stops page from refreshing
+  let album = {
+    title: document.getElementById("title").value,
+    artist: document.getElementById("artist").value,
+    url: document.getElementById("url").value
+  };
+  inject(album); // add to the page
+  clearFields(); // reset form inputs
+});
+
+//4. Injecting into the DOM
 function inject(shoes) {
   DOMSelectors.display.insertAdjacentHTML(
     "afterbegin",
@@ -165,13 +173,38 @@ function inject(shoes) {
       <img class="card-img" src="${shoes.img}"/>
       <h2 class="card-header">${shoes.name}</h2>
       <h3 class="card-price">${shoes.price}</h3>
-    
+      <button class="addcart">Buy</button>
     </div>`
   );
 }
+
+/* function inject(shoes) {
+  //query the html where we inject the card
+  const container = document.querySelector(".container");
+  container.insertAdjacentHTML("afterbegin", `<h2>${shoes.name}</h2>`);
+} */
 
 // products.forEach((product) => inject(product));
   //put card on screen
   //insertadjacenthtml
   //card html string
   //find in the dom md
+
+
+/* function getCards() {
+  const buttons = document.querySelectorAll("button");
+  //not needed unless you need to filter etc
+  const btnArr = Array.from(button);
+  btnArr.forEach((btn) => 
+    btn.addEventListener("click", function(event){
+      //console.log(event.target);
+      console.log(
+        event.target.closest(".display-card").getAttribute("data-id"),
+        event.target.textContent
+      );
+    })
+  )
+}
+getCards(); */
+
+//make a cart (HTML, JS = array)
