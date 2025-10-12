@@ -154,28 +154,20 @@ const DOMSelectors = {
 };
 
 
-document.getElementById("form").addEventListener("submit", function (event) {
-  event.preventDefault(); // stops page from refreshing
-  let newShoes = {
-    name: document.getElementById("name").value,
-    price: document.getElementById("price").value,
-    img: document.getElementById("img").value
-  };
-  inject(newShoes); // add to the page
-});
-
-//4. Injecting into the DOM
 function inject(shoes) {
-  DOMSelectors.display.insertAdjacentHTML(
-    "afterbegin",
+  const container = document.querySelector(".container");
+  container.insertAdjacentHTML("afterbegin",
     `<div class="card">
       <img class="card-img" src="${shoes.img}"/>
       <h2 class="card-header">${shoes.name}</h2>
       <h3 class="card-price">${shoes.price}</h3>
       <button class="addcart">Buy</button>
     </div>`
-  );
+  )
 }
+inject(shoes);
+
+shoes.forEach((shoes) => inject(shoes));
 
 /* function inject(shoes) {
   //query the html where we inject the card
