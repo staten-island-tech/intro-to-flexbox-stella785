@@ -165,21 +165,22 @@ function inject(shoes) {
     </div>`
   )
 }
-inject(shoes);
 
 shoes.forEach((shoes) => inject(shoes));
 
-/* function inject(shoes) {
-  //query the html where we inject the card
-  const container = document.querySelector(".container");
-  container.insertAdjacentHTML("afterbegin", `<h2>${shoes.name}</h2>`);
-} */
-
-// products.forEach((product) => inject(product));
-  //put card on screen
-  //insertadjacenthtml
-  //card html string
-  //find in the dom md
+function sort(){
+  const buttons = document.querySelectorAll("button");
+  const btnArr = Array.from(button);
+  btnArr.forEach((btn) =>
+    btn.addEventListener("click", function(event) {
+      console.log(
+        event.target.textContent,
+        event.target.closest(".display-card").getAttribute("data-id")
+      );
+    })
+  )
+}
+sort();
 
 
 /* function getCards() {
