@@ -168,19 +168,20 @@ function inject(shoes) {
 
 shoes.forEach((shoes) => inject(shoes));
 
-function sort(){
-  const buttons = document.querySelectorAll("button");
-  const btnArr = Array.from(button);
-  btnArr.forEach((btn) =>
-    btn.addEventListener("click", function(event) {
-      console.log(
-        event.target.textContent,
-        event.target.closest(".display-card").getAttribute("data-id")
-      );
-    })
-  )
+function display(brand) {
+  const allButton = document.querySelector(".all");
+  allButton.addEventListener("click", function() {
+    console.log("all")
+  });
+  const nikeButton = document.querySelector(".n");
+  nikeButtonButton.addEventListener("click", function() {
+    console.log("nike")
+  });
+  const asicsButton = document.querySelector(".a");
+  asicsButton.addEventListener("click", function() {
+    console.log("asics")
+  });
 }
-sort();
 
 
 /* function getCards() {
