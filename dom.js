@@ -4,6 +4,7 @@ const shoes = [
     price: 120,
     brand: "Nike",
     img: "images/Nike dunk.avif",
+    url: "https://www.nike.com/t/dunk-low-retro-mens-shoes-5FQWGR",
     inStock: true,
   },
   {
@@ -11,6 +12,7 @@ const shoes = [
     price: 100,
     brand: "Nike",
     img: "images/sabrina silencer.avif",
+    url: "https://www.nike.com/t/sabrina-3-silencer-big-kids-basketball-shoes-LArVJUMq/IB3088-100",
     inStock: true,
   },
   {
@@ -18,6 +20,7 @@ const shoes = [
     price: 90,
     brand: "Nike",
     img: "images/air force.avif",
+    url: "https://www.nike.com/t/air-force-1-le-big-kids-shoes-3JNSvS/DH2920-111",
     inStock: true,
   },
   {
@@ -25,6 +28,7 @@ const shoes = [
     price: 85,
     brand: "Nike",
     img: "images/nike field.avif",
+    url: "https://www.nike.com/t/field-general-ref-big-kids-shoes-R3DCzx/IF0465-001",
     inStock: true,
   },
   {
@@ -32,6 +36,7 @@ const shoes = [
     price: 90,
     brand: "ASICS",
     img: "images/gel asic.jpg",
+    url: "https://www.asics.com/us/en-us/gel-cumulus-27-grade-school/p/ANA_1014A366-500.html",
     inStock: true,
   },
   {
@@ -39,6 +44,7 @@ const shoes = [
     price: 95,
     brand: "ASICS",
     img: "images/gel resolution.webp",
+    url: "https://www.asics.com/us/en-us/gel-resolution-x-grade-school/p/ANA_1044A081-101.html",
     inStock: true,
   },
   {
@@ -46,6 +52,7 @@ const shoes = [
     price: 165,
     brand: "ASICS",
     img: "images/kayano.webp",
+    url: "https://www.asics.com/us/en-us/gel-kayano-32-tokyo/p/ANA_1012B915-500.html",
     inStock: true,
   },
   {
@@ -53,6 +60,7 @@ const shoes = [
     price: 65,
     brand: "ASICS",
     img: "images/snapdown.webp",
+    url: "https://www.asics.com/us/en-us/snapdown-4-grade-school/p/ANA_1084A014-001.html",
     inStock: true,
   },
   {
@@ -60,6 +68,7 @@ const shoes = [
     price: 60,
     brand: "ASIC",
     img: "images/matflex.webp",
+    url: "https://www.asics.com/us/en-us/matflex-7-grade-school/p/ANA_1084A011-400.html?width=Standard",
     inStock: true,
   },
   {
@@ -67,6 +76,7 @@ const shoes = [
     price: 120,
     brand:"Nike",
     img: "images/jam.avif",
+    url: "https://www.nike.com/t/jam-womens-shoes-TMf3j8/FN0314-100",
     inStock: true,
   },
   {
@@ -74,6 +84,7 @@ const shoes = [
     price: 110,
     brand:"Nike",
     img: "images/luka4.avif",
+    url: "https://www.nike.com/t/luka-4-gone-camping-big-kids-basketball-shoes-V7X5B5/IF0484-300",
     inStock: true,
   },
   {
@@ -81,6 +92,7 @@ const shoes = [
     price: 170,
     brand: "Nike",
     img: "images/vomero.avif",
+    url: "https://www.nike.com/t/zoom-vomero-5-womens-shoes-81TPKW/IM2404-645",
     inStock: true,
   },
   {
@@ -88,6 +100,7 @@ const shoes = [
     price: 55,
     brand: "Nike",
     img: "images/aquaswoosh.avif",
+    url: "https://www.nike.com/t/aqua-swoosh-big-kids-sandals-wvMBze7F/FV6363-800",
     inStock: true,
   },
   {
@@ -95,6 +108,7 @@ const shoes = [
     price: 170,
     brand: "Nike",
     img: "images/womenartcollection.avif",
+    url: "https://www.nike.com/t/dunk-low-womens-artist-collection-womens-shoes-5vkQTb/HV8575-100",
     inStock: true,
   },
   {
@@ -102,6 +116,7 @@ const shoes = [
     price: 57,
     brand: "Nike",
     img: "images/cosmic.avif",
+    url: "https://www.nike.com/t/cosmic-runner-big-kids-road-running-shoes-Ua3qA0Nz/HM4402-601",
     inStock: true,
   },
   {
@@ -109,6 +124,7 @@ const shoes = [
     price: 65,
     brand: "Nike",
     img: "images/hustled12.avif",
+    url: "https://www.nike.com/t/team-hustle-d-12-big-kids-basketball-shoes-baRv6HO8/HF6279-102",
     inStock: true,
   },
   {
@@ -116,6 +132,7 @@ const shoes = [
     price: 77,
     brand: "Nike",
     img: "images/giannis4.avif",
+    url: "https://www.nike.com/t/giannis-immortality-4-big-kids-basketball-shoes-dV7RTS1D/FZ6734-001",
     inStock: true,
   },
   {
@@ -123,6 +140,7 @@ const shoes = [
     price: 60,
     brand: "ASICS",
     img: "images/contend9.webp",
+    url: "https://www.asics.com/us/en-us/contend-9-grade-school/p/ANA_1014A337-103.html?width=Standard",
     inStock: true,
   },
   {
@@ -130,6 +148,7 @@ const shoes = [
     price: 100,
     brand: "ASICS",
     img: "images/skyhand.webp",
+    url: "https://www.asics.com/us/en-us/skyhand-og/p/ANA_1203A452-301.html",
     inStock: true,
   },
   {
@@ -137,6 +156,7 @@ const shoes = [
     price: 60,
     brand: "ASICS",
     img: "images/jsgs.webp",
+    url: "https://www.asics.com/us/en-us/japan-s-grade-school/p/ANA_1204A007-120.html",
     inStock: true,
   }
 ]
@@ -161,7 +181,9 @@ function inject(shoes) {
       <img class="card-img" src="${shoes.img}"/>
       <h2 class="card-header">${shoes.name}</h2>
       <h3 class="card-price">${shoes.price}</h3>
-      <button class="addcart">Buy</button>
+      <a href="${shoes.url}">
+            <button class="addcart">Buy</button>
+      </a>
     </div>`
   )
 }
@@ -169,16 +191,24 @@ function inject(shoes) {
 shoes.forEach((shoes) => inject(shoes));
 
 function sort(brand) {
-  const button = document.querySelector(".all");
-  const btnArr = Array.from(button);
-  btnArr.forEach((btn) =>
-    btn.addEventListener("click", function() {
-      console.log(
-        
-      )
-    })
-  )
+  const buttons = document.querySelectorAll(".all, .n, .a");
+  const card = document.querySelectorAll(".card");
+  //const btnArr = Array.from(buttons);
+  buttons.forEach(button => {
+    button.addEventListener("click", function(event) {
+      const category = event.target.getAttribute(".card");
+
+      if (category === "All") {
+        //show all the cards
+      } else if (category === "Nike") {
+        //show only nike cards
+      } else if (category = "ASICS") {
+        //show only asics
+      }
+    });
+  });
 }
+sort();
 
 
 /* function getCards() {
