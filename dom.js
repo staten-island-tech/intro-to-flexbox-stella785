@@ -168,36 +168,37 @@ function inject(shoes) {
 
 shoes.forEach((shoes) => inject(shoes));
 
-function display(brand) {
-  const allButton = document.querySelector(".all");
-  allButton.addEventListener("click", function() {
-    console.log("all")
-  });
-  const nikeButton = document.querySelector(".n");
-  nikeButtonButton.addEventListener("click", function() {
-    console.log("nike")
-  });
-  const asicsButton = document.querySelector(".a");
-  asicsButton.addEventListener("click", function() {
-    console.log("asics")
-  });
+function sort(brand) {
+  const button = document.querySelector(".all");
+  const btnArr = Array.from(button);
+  btnArr.forEach((btn) =>
+    btn.addEventListener("click", function() {
+      console.log(
+        
+      )
+    })
+  )
 }
 
 
 /* function getCards() {
   const buttons = document.querySelectorAll("button");
   //not needed unless you need to filter etc
-  const btnArr = Array.from(button);
+  const btnArr = Array.from(buttons);
   btnArr.forEach((btn) => 
     btn.addEventListener("click", function(event){
       //console.log(event.target);
       console.log(
-        event.target.closest(".display-card").getAttribute("data-id"),
+        event.target.closest(".card").getAttribute(".brand"),
         event.target.textContent
       );
     })
   )
 }
 getCards(); */
-
+//make array
+//find item in array, .find("name")
+//push item to cart
+//show cart
+//total cart
 //make a cart (HTML, JS = array)
