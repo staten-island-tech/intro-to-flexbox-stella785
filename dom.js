@@ -161,11 +161,7 @@ const shoes = [
   }
 ]
 
-//created array
-//find the container using query selector
-//create function to add 1 card to screen
 
-//2. selecting elements in js
 const DOMSelectors = {
   name: document.getElementById("name"),
   price: document.getElementById("price"),
@@ -187,23 +183,20 @@ function inject(shoes) {
     </div>`
   )
 }
-
 shoes.forEach((shoes) => inject(shoes));
 
-function sort(brand) {
-  const buttons = document.querySelectorAll(".all, .n, .a");
+function sort() {
+  const buttons = document.querySelectorAll("button");
   const card = document.querySelectorAll(".card");
-  //const btnArr = Array.from(buttons);
-  buttons.forEach(button => {
-    button.addEventListener("click", function(event) {
-      const category = event.target.getAttribute(".card");
+  const btnArr = Array.from(buttons);
+  btnArr.forEach((btn) => {
+    btn.addEventListener("click", function(event) {
+      const category = event.target.getAttribute(".category");
 
-      if (category === "All") {
-        //show all the cards
-      } else if (category === "Nike") {
-        //show only nike cards
-      } else if (category = "ASICS") {
-        //show only asics
+      if (category === "Nike") {
+        console.log(event.target.closest(".card"));
+      } else if (category === "ASICS") {
+        console.log(event.target.closest(".card"));
       }
     });
   });
