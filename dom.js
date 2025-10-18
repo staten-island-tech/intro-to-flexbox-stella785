@@ -203,6 +203,27 @@ function sort() {
 }
 sort();
 
+/* function sortNike() {
+  const nikeButton = document.querySelectorAll(".n");
+  const card = document.querySelectorAll(".card");
+  const category = document.querySelectorAll(".category");
+  nikeButton.forEach((btn) => {
+    btn.addEventListener("click", function(event) {
+      if (category === "Nike") {
+        
+      }
+    })
+  })
+} */
+
+function sortNike(event) {
+  const buttons = document.querySelectorAll("button");
+  const card = document.querySelectorAll(".card");
+  const category = event.target.getAttribute(".category");
+  if (category === "ASICS") {
+    event.target.remove(".")
+  }
+}
 
 /* function getCards() {
   const buttons = document.querySelectorAll("button");
