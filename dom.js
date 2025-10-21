@@ -185,7 +185,20 @@ function inject(shoes) {
 }
 shoes.forEach((shoes) => inject(shoes));
 
-function sort() {
+function filterbyBrand(brand) {
+  const cards = document.querySelectorAll(".card");
+  cards.forEach((card) => {
+    const cardCategory = card.getAttribute("category");
+    if (cardCategory === brand) {
+      card.style.display = "flex";
+    } else {
+      card.style.display = "none";
+    }
+  })
+}
+filterbyBrand("Nike");
+
+/* function sort() {
   const buttons = document.querySelectorAll("button");
   const card = document.querySelectorAll(".card");
   const btnArr = Array.from(buttons);
@@ -201,29 +214,20 @@ function sort() {
     });
   });
 }
-sort();
+sort(); */
 
-/* function sortNike() {
-  const nikeButton = document.querySelectorAll(".n");
-  const card = document.querySelectorAll(".card");
-  const category = document.querySelectorAll(".category");
-  nikeButton.forEach((btn) => {
-    btn.addEventListener("click", function(event) {
-      if (category === "Nike") {
-        
-      }
-    })
-  })
-} */
-
-function sortNike(event) {
-  const buttons = document.querySelectorAll("button");
-  const card = document.querySelectorAll(".card");
-  const category = event.target.getAttribute(".category");
-  if (category === "ASICS") {
-    event.target.remove(".")
+/* const numbers = [1, 2, 3, 4, 5];
+let x = 0;
+while (x<11) {
+  if (numbers.includes(3)) {
+    console.log("found");
+  } else {
+    numbers.push(x);
   }
+  x++;
 }
+console.log(numbers); */
+
 
 /* function getCards() {
   const buttons = document.querySelectorAll("button");
