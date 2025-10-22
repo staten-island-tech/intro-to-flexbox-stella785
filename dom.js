@@ -181,7 +181,7 @@ function inject(shoes) {
     `<div class="card" category ="${shoes.brand}">
       <img class="card-img" src="${shoes.img}"/>
       <h2 class="card-header">${shoes.name}</h2>
-      <h3 class="card-price">${shoes.price}</h3>
+      <h3 class="card-price">$${shoes.price}</h3>
       <a href="${shoes.url}">
             <button class="addcart">Buy</button>
       </a>
@@ -203,15 +203,18 @@ function filterbyBrand(brand) {
   cards.forEach((card) => {
     const cardCategory = card.getAttribute("category");
     if (cardCategory === brand) {
-      card.style.display = "inline-block";
+      card.style.display = "block";
     } else {
       card.style.display = "none";
     }
   })
 }
-document.querySelector(".n").addEventListener("click", (event) => filterbyBrand("Nike"));
-document.querySelector(".a").addEventListener("click", (event) => filterbyBrand("ASICS"));
+document.querySelector(".n").addEventListener("click", () => filterbyBrand("Nike"));
+document.querySelector(".a").addEventListener("click", () => filterbyBrand("ASICS"));
 
+function addtoCart() {
+  
+}
 
 /* const numbers = [1, 2, 3, 4, 5];
 let x = 0;
