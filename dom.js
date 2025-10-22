@@ -167,13 +167,18 @@ const DOMSelectors = {
   price: document.getElementById("price"),
   brand: document.getElementById("brand"),
   img: document.getElementById("img"),
+  
+  container: document.querySelector(".container"),
+  allBtn: document.querySelector(".all"),
+  nikeBtn: document.querySelector(".n"),
+  asicsBtn: document.querySelector(".a")
 };
 
 
 function inject(shoes) {
   const container = document.querySelector(".container");
   container.insertAdjacentHTML("afterbegin",
-    `<div class="card">
+    `<div class="card" category ="${shoes.brand}">
       <img class="card-img" src="${shoes.img}"/>
       <h2 class="card-header">${shoes.name}</h2>
       <h3 class="card-price">${shoes.price}</h3>
@@ -185,36 +190,28 @@ function inject(shoes) {
 }
 shoes.forEach((shoes) => inject(shoes));
 
+function all() {
+  const cards = document.querySelectorAll(".card");
+  cards.forEach((card) => {
+    card.style.display = "inline-block";
+  })
+}
+document.querySelector(".all").addEventListener("click", all);
+
 function filterbyBrand(brand) {
   const cards = document.querySelectorAll(".card");
   cards.forEach((card) => {
     const cardCategory = card.getAttribute("category");
     if (cardCategory === brand) {
-      card.style.display = "flex";
+      card.style.display = "inline-block";
     } else {
       card.style.display = "none";
     }
   })
 }
-filterbyBrand("Nike");
+document.querySelector(".n").addEventListener("click", (event) => filterbyBrand("Nike"));
+document.querySelector(".a").addEventListener("click", (event) => filterbyBrand("ASICS"));
 
-/* function sort() {
-  const buttons = document.querySelectorAll("button");
-  const card = document.querySelectorAll(".card");
-  const btnArr = Array.from(buttons);
-  btnArr.forEach((btn) => {
-    btn.addEventListener("click", function(event) {
-      const category = event.target.getAttribute(".category");
-
-      if (category === "Nike") {
-        console.log(event.target.closest(".card"));
-      } else if (category === "ASICS") {
-        console.log(event.target.closest(".card"));
-      }
-    });
-  });
-}
-sort(); */
 
 /* const numbers = [1, 2, 3, 4, 5];
 let x = 0;
