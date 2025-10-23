@@ -183,8 +183,9 @@ function inject(shoes) {
       <h2 class="card-header">${shoes.name}</h2>
       <h3 class="card-price">$${shoes.price}</h3>
       <a href="${shoes.url}">
-            <button class="addcart">Buy</button>
+            <button class="b">Buy</button>
       </a>
+      <button class = "cart">Add to cart</button>
     </div>`
   )
 }
@@ -213,7 +214,12 @@ document.querySelector(".n").addEventListener("click", () => filterbyBrand("Nike
 document.querySelector(".a").addEventListener("click", () => filterbyBrand("ASICS"));
 
 function addtoCart() {
-  
+  const cartButton = document.querySelectorAll(".cart");
+  cartButton.forEach(("button") => {
+    button.addEventListener("click", () =>
+      
+    )
+  })
 }
 
 /* const numbers = [1, 2, 3, 4, 5];

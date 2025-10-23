@@ -49,6 +49,10 @@ button {
   font-size: 16px;
 }
 
+.cart, .b {
+  display: block;
+  margin: 10px auto;
+}
 
 h1 {
   background-color: #607D8B;
