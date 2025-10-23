@@ -215,11 +215,14 @@ document.querySelector(".a").addEventListener("click", () => filterbyBrand("ASIC
 
 function addtoCart() {
   const cartButton = document.querySelectorAll(".cart");
-  cartButton.forEach(("button") => {
-    button.addEventListener("click", () =>
-      
-    )
-  })
+  const card = card.querySelectorAll(".card");
+  const cardPrice = card.getAttribute(".card-price");
+  const cardName = card.getAttribute(".card-header");
+  cartButton.forEach((button) =>
+    button.addEventListener("click", function(event) {
+      console.log(event.target.textConent(".card-price"));
+    })
+  )
 }
 
 /* const numbers = [1, 2, 3, 4, 5];
