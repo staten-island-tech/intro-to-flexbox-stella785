@@ -222,12 +222,19 @@ function addtoCart() {
     button.addEventListener("click", function(event) {
       const card = event.target.closest(".card");
       const cardPrice = card.querySelector(".card-price").textContent;
+      const total = document.querySelector(".total");
       const cardName = card.querySelector(".card-header").textContent;
-      list.insertAdjacentHTML("beforeend", `<ul>${cardName} ${cardPrice}</ul>`);
+      list.insertAdjacentHTML("beforeend", 
+        `<ul>${cardName} ${cardPrice}</ul>`,
+        
+      );
+      
     })
   )
 }
 addtoCart();
+
+
 
 /* const numbers = [1, 2, 3, 4, 5];
 let x = 0;
