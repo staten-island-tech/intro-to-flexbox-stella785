@@ -213,17 +213,21 @@ function filterbyBrand(brand) {
 document.querySelector(".n").addEventListener("click", () => filterbyBrand("Nike"));
 document.querySelector(".a").addEventListener("click", () => filterbyBrand("ASICS"));
 
+let cart = [];
+
 function addtoCart() {
   const cartButton = document.querySelectorAll(".cart");
-  const card = card.querySelectorAll(".card");
-  const cardPrice = card.getAttribute(".card-price");
-  const cardName = card.getAttribute(".card-header");
+  const list = document.querySelector(".items");
   cartButton.forEach((button) =>
     button.addEventListener("click", function(event) {
-      console.log(event.target.textConent(".card-price"));
+      const card = event.target.closest(".card");
+      const cardPrice = card.querySelector(".card-price").textContent;
+      const cardName = card.querySelector(".card-header").textContent;
+      list.insertAdjacentHTML("beforeend", `<ul>${cardName} ${cardPrice}</ul>`);
     })
   )
 }
+addtoCart();
 
 /* const numbers = [1, 2, 3, 4, 5];
 let x = 0;
