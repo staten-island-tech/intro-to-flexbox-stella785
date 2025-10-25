@@ -215,6 +215,16 @@ document.querySelector(".a").addEventListener("click", () => filterbyBrand("ASIC
 
 let cart = [];
 
+function totalPrice() {
+  let t = 0;
+  let x = 0;
+  while (x < cart.length) {
+    t += cart[x];
+    x++
+  }
+  document.querySelector(".total").textContent = `Total: $${t}`;
+}
+
 function addtoCart() {
   const cartButton = document.querySelectorAll(".cart");
   const list = document.querySelector(".items");
@@ -224,11 +234,11 @@ function addtoCart() {
       const cardPrice = card.querySelector(".card-price").textContent;
       const total = document.querySelector(".total");
       const cardName = card.querySelector(".card-header").textContent;
+      cart.push(cardPrice)
       list.insertAdjacentHTML("beforeend", 
-        `<ul>${cardName} ${cardPrice}</ul>`,
-        
+        `<ul>${cardName} ${cardPrice}</ul>`
       );
-      
+      totalPrice();
     })
   )
 }
