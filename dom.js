@@ -175,10 +175,10 @@ const DOMSelectors = {
 };
 
 
-function inject(shoes) {
+function inject(shoes,index) {
   const container = document.querySelector(".container");
   container.insertAdjacentHTML("afterbegin",
-    `<div class="card" category ="${shoes.brand}">
+    `<div class="card" category ="${shoes.brand}" data-id="${index}">
       <img class="card-img" src="${shoes.img}"/>
       <h2 class="card-header">${shoes.name}</h2>
       <h3 class="card-price">$${shoes.price}</h3>
@@ -189,7 +189,7 @@ function inject(shoes) {
     </div>`
   )
 }
-shoes.forEach((shoes) => inject(shoes));
+shoes.forEach((shoes,index) => inject(shoes,index));
 
 function all() {
   const cards = document.querySelectorAll(".card");
@@ -230,7 +230,7 @@ function addtoCart() {
   const list = document.querySelector(".items");
   cartButton.forEach((button) =>
     button.addEventListener("click", function(event) {
-      const card = event.target.closest(".card");
+      const card = event.target.closest(".card").getAttribute("data-id");
       const cardPrice = card.querySelector(".card-price").textContent;
       const total = document.querySelector(".total");
       const cardName = card.querySelector(".card-header").textContent;
