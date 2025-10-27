@@ -175,10 +175,10 @@ const DOMSelectors = {
 };
 
 
-function inject(shoes,index) {
+function inject(shoes) {
   const container = document.querySelector(".container");
   container.insertAdjacentHTML("afterbegin",
-    `<div class="card" category ="${shoes.brand}" data-id="${index}">
+    `<div class="card" category ="${shoes.brand}">
       <img class="card-img" src="${shoes.img}"/>
       <h2 class="card-header">${shoes.name}</h2>
       <h3 class="card-price">$${shoes.price}</h3>
@@ -189,7 +189,7 @@ function inject(shoes,index) {
     </div>`
   )
 }
-shoes.forEach((shoes,index) => inject(shoes,index));
+shoes.forEach((shoes) => inject(shoes));
 
 function all() {
   const cards = document.querySelectorAll(".card");
@@ -230,8 +230,9 @@ function addtoCart() {
   const list = document.querySelector(".items");
   cartButton.forEach((button) =>
     button.addEventListener("click", function(event) {
-      const card = event.target.closest(".card").getAttribute("data-id");
-      const cardPrice = card.querySelector(".card-price").textContent;
+      const card = event.target.closest(".card");
+      const cardPriceT = card.querySelector(".card-price").textContent;
+      const cardPrice = parseInt(cardPriceT.replace("$", ""))
       const total = document.querySelector(".total");
       const cardName = card.querySelector(".card-header").textContent;
       cart.push(cardPrice)
@@ -243,6 +244,7 @@ function addtoCart() {
   )
 }
 addtoCart();
+
 
 
 
