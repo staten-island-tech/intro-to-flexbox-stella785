@@ -237,7 +237,7 @@ function addtoCart() {
       const cardName = card.querySelector(".card-header").textContent;
       cart.push(cardPrice)
       list.insertAdjacentHTML("beforeend", 
-        `<ul>${cardName} ${cardPrice}</ul>`
+        `<ul>${cardName} ${cardPriceT}</ul>`
       );
       totalPrice();
     })
